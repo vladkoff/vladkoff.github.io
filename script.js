@@ -163,8 +163,7 @@ const generateFigure = () => {
 
 const drawFieldWithFigure = () => {
     const tmpField = gameField.map(arr => arr.map(item => item));
-    currentFigure.forEach((row, height) => row.map((item, width) => tmpField[height + figurePosition.height][width + figurePosition.width] = item || tmpField[height + figurePosition.height][width + figurePosition.width]))
-
+    currentFigure.forEach((row, tmpHeight) => row.map((item, tmpWidth) => height > tmpHeight + figurePosition.height && width > tmpWidth + figurePosition.width ? tmpField[tmpHeight + figurePosition.height][tmpWidth + figurePosition.width] = item || tmpField[tmpHeight + figurePosition.height][tmpWidth + figurePosition.width] : {}))
     drawField(tmpField)
 }
 const moveFigureToField = () => {
