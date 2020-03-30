@@ -1,0 +1,29 @@
+#main {
+    width: 60vw;
+    height: 100vh;
+
+}
+
+#additional {
+    width: 40vw;
+    height: 100vh;
+
+}
+
+.wrapper {
+    display: flex;
+}
+
+.block {
+    border: solid;
+    width: 2vw;
+    height: 2vw;
+}
+
+.row {
+    display: flex;
+}
+
+.colored {
+    background-color: red;
+}
