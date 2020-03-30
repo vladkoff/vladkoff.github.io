@@ -211,9 +211,12 @@ const gameOverProcessing = () => {
 
 
 const rotate = (matrix) => {          
-    const tmpField = matrix.map(arr => arr.map(item => item));
-
-    return tmpField[0].map((col, i) => tmpField.map(row => row[i]));;
+    var newCurrent = [];
+    for (var y=0; y<4; y++) {
+    newCurrent[y] = [];
+    for (var x=0; x<4; x++) newCurrent[y][x]=matrix[3-x][y];
+    }
+    return newCurrent;
 }
 
 const nextTick = () => {
